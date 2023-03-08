@@ -9,7 +9,7 @@ int main() {
 
 srand((unsigned) time(NULL));
 int r = 0,acertos = 0,tamanho=0,tentativas=0;
-r = abs(rand() % 11 - 1);
+r = abs(rand() % 21 - 1);
 tamanho = strlen(palavras[r]);
 char *palavraSecreta;
 palavraSecreta = (char*) malloc((tamanho  * sizeof(char) ));
