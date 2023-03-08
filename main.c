@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <ctype.h>
-char palavras[20][10] = {"Arroz","Frango","Rato","Cavalo","Tucano","Praia","Escudo","Marte","Faca","Peixe","Casa","Ovo","Terra","Semestre","Lua","Zoe","Luna","Black","Biba","Buba"};
+char palavras[21][10] = {"Arroz","Frango","Rato","Cavalo","Tucano","Praia","Escudo","Marte","Faca","Peixe","Casa","Ovo","Terra","Semestre","Lua","Zoe","Luna","Black","Biba","Buba"};
 
 int main() {
 
