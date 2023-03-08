@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <ctype.h>
-char palavras[10][10] = {"Arroz","Frango","Rato","Cavalo","Tucano","Praia","Escudo","Marte","Faca","Peixe"};
+char palavras[20][10] = {"Arroz","Frango","Rato","Cavalo","Tucano","Praia","Escudo","Marte","Faca","Peixe","Casa","Ovo","Terra","Semestre","Lua","Zoe","Luna","Black","Biba","Buba"};
 
 int main() {
 
@@ -24,24 +24,30 @@ for(int i = 0;i<tamanho;i++) {
 }
 puts("\n");
 
-while((tentativas < tamanho )) {
+while((tentativas < tamanho + 2 )) {
     ch = getchar();
     if(ch != '\n'  && isalpha(ch)) {
         tentativas++;
     for(int i = 0;i<tamanho;i++) {
-        if(palavras[r][i] == ch  && !isalpha(palavraSecreta[i])) {
+        if(tolower(palavras[r][i]) == tolower(ch)  && !isalpha(palavraSecreta[i])) {
             palavraSecreta[i] = ch;
             printf("%c \n", palavraSecreta[i]);
+            acertos++;
         }
+        
     }
     printf("%s",palavraSecreta);
     puts("\n");
+    if(acertos == tamanho) {
+        printf("Vitoria! \nSua palavra era: %s \nTentativas: %d \n",palavras[r],tentativas);
+        system("pause");
+        return 0;
+    }
     }
 
 }
 
-
-
 printf("Jogo Encerrado! \nSua palavra era: %s \nTentativas: %d \n",palavras[r],tentativas);
 system("pause");
+return 0;
 }
